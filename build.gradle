@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group = 'com.purpleraven'
+version = '0.0.2'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+          url ''
+          credentials {
+            username = ''
+            password = ''
+          }
+       }
+    }
+}
